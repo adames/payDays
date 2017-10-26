@@ -7,7 +7,8 @@ function nextTenPayDates(payDate) {
     tenWeeks.push(currentDate)
   }
 
-  let nextTenIntegerDates = tenWeeks.map(week => { let month = week[0]
+  let nextTenIntegerDates = tenWeeks.map(week => { 
+    let month = week[0]
     let day = week[1]
     let year = week[2]
     let date_is_holiday = holidays.includes(integerArrayToDateString([month, day, year]))
@@ -32,7 +33,8 @@ function nextTenPayDates(payDate) {
   )
 }
 
-function integerArrayToDateString(integerArray) { let newDay = integerArray[1].toString()
+function integerArrayToDateString(integerArray) { 
+  let newDay = integerArray[1].toString()
   let newMonth = integerArray[0].toString()
   let newYear = integerArray[2].toString()
   if (newDay.length == 1) {
